@@ -7,6 +7,7 @@ set mouse=a
 set backspace=2
 set number
 filetype plugin indent on
+syntax on
 
 " Functions
 function! NumberToggle()
@@ -32,21 +33,21 @@ let mapleader=" "
 nnoremap <Leader>q :noh<return><esc>
 nnoremap <C-n> :call NumberToggle()<cr>
 
-"" Uncomment this section if not using vim on servers.
-"" settings with plugins
-"
-"execute pathogen#infect()
-"map <F2> :NERDTreeToggle<CR>
-"
-"" Theme settings
-"set background=dark
-"let g:molokai_original=1
-"if has("gui_running")
-"	set cursorline
-"	set gfn=Inconsolata\ 13
-"	colorscheme molokai
-"elseif $COLORTERM == 'gnome-terminal'
-"	set t_Co=256
-"	let g:rehash256=1
-"	colorscheme molokai
-"endif
+" Uncomment this section if not using vim on servers.
+" settings with plugins
+
+execute pathogen#infect()
+map <F2> :NERDTreeToggle<CR>
+
+" Theme settings
+set background=dark
+let g:molokai_original=1
+if has("gui_running")
+	set cursorline
+	set gfn=Inconsolata\ 13
+	colorscheme molokai
+elseif $COLORTERM == 'gnome-terminal'
+	set t_Co=256
+	let g:rehash256=1
+	colorscheme molokai
+endif

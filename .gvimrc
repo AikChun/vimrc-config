@@ -1,1 +1,1 @@
-set tb t_vb=
+set vb t_vb=
