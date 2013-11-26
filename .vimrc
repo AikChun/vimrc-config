@@ -32,7 +32,7 @@ let mapleader=" "
 nnoremap <Leader>q :noh<return><esc>
 nnoremap <C-n> :call NumberToggle()<cr>
 
-""" Uncomment this section if not using vim on servers.
+"" Uncomment this section if not using vim on servers.
 "" settings with plugins
 "
 "execute pathogen#infect()
@@ -44,8 +44,9 @@ nnoremap <C-n> :call NumberToggle()<cr>
 "if has("gui_running")
 "	set cursorline
 "	set gfn=Inconsolata\ 13
+"	colorscheme molokai
 "elseif $COLORTERM == 'gnome-terminal'
 "	set t_Co=256
 "	let g:rehash256=1
+"	colorscheme molokai
 "endif
-"colorscheme molokai
