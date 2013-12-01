@@ -8,8 +8,10 @@ set backspace=2
 set relativenumber
 filetype plugin indent on
 syntax on
-"" To change tab to space characters
-" set tabstop=4 shiftwidth=4 expandtab
+set list
+set listchars=tab:\|\ 
+"" To change tab to space use expandtab
+set tabstop=4 shiftwidth=4 noexpandtab
 
 " Functions
 function! NumberToggle()
@@ -33,7 +35,7 @@ vnoremap <C-C> <ESC>
 	inoremap <C-s> <C-o>:update<CR>
 "" }
 
-nnoremap <Leader>n :noh<return><esc>
+nnoremap <Leader>h :noh<return><esc>
 nnoremap <C-n> :call NumberToggle()<cr>
 
 " Uncomment this section if not using vim on servers.
