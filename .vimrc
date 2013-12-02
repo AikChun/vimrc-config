@@ -48,25 +48,22 @@ nnoremap <C-L> <C-O>A
 	inoremap <C-S> <C-O>:update<CR>
 "" }
 
-
-
-
-" Uncomment this section if not using vim on servers.
-" settings with plugins
-
-execute pathogen#infect()
-map <F2> :NERDTreeToggle<CR>
-
-" Theme settings
-set background=dark
-let g:molokai_original=1
-if has("gui_running")
-	set cursorline
-	set gfn=Inconsolata\ 13
-	colorscheme molokai
-elseif $COLORTERM == 'gnome-terminal'
-	set cursorline
-	set t_Co=256
-	let g:rehash256=1
-	colorscheme molokai
-endif
+"" Uncomment this section if not using vim on servers.
+"" settings with plugins
+"
+"execute pathogen#infect()
+"map <F2> :NERDTreeToggle<CR>
+"
+"" Theme settings
+"set background=dark
+"let g:molokai_original=1
+"if has("gui_running")
+"	set cursorline
+"	set gfn=Inconsolata\ 13
+"	colorscheme molokai
+"elseif $COLORTERM == 'gnome-terminal'
+"	set cursorline
+"	set t_Co=256
+"	let g:rehash256=1
+"	colorscheme molokai
+"endif
