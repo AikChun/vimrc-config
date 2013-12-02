@@ -8,8 +8,11 @@ set backspace=2
 set relativenumber
 filetype plugin indent on
 syntax on
-set list
-set listchars=tab:\|\ 
+set nocompatible
+set wildmenu
+
+"set list
+"set listchars=tab:\|\ 
 "" To change tab to space use expandtab
 set tabstop=4 shiftwidth=4 noexpandtab
 
@@ -26,17 +29,27 @@ endfunc
 
 " mappings
 let mapleader=" "
-inoremap <C-C> <ESC>
-vnoremap <C-C> <ESC>
+map <F3> :vsplit $MYVIMRC<CR>
+map <F4> :so $MYVIMRC<CR>
+nnoremap Q <nop>
+nnoremap <Leader>h :noh<return><esc>
+nnoremap <C-N> :call NumberToggle()<CR>
+
+"" Insert mode mappings for home, end, newline up and newline down
+nnoremap <C-H> <C-O>I
+nnoremap <C-J> <C-O>o
+nnoremap <C-K> <C-O>O
+nnoremap <C-L> <C-O>A
+
 "" Enable Ctrl+s to save file {
 	"" REMEMBER TO DISABLE <C-S> in .bashrc by adding stty stop undef
-	nnoremap <C-s> :update<CR>
-	vnoremap <C-s> <C-c>:update<CR>
-	inoremap <C-s> <C-o>:update<CR>
+	nnoremap <C-S> :update<CR>
+	vnoremap <C-S> <C-C>:update<CR>
+	inoremap <C-S> <C-O>:update<CR>
 "" }
 
-nnoremap <Leader>h :noh<return><esc>
-nnoremap <C-n> :call NumberToggle()<cr>
+
+
 
 " Uncomment this section if not using vim on servers.
 " settings with plugins
